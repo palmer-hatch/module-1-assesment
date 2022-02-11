@@ -2,19 +2,34 @@
 
 console.log("Welcome to the Password Validator Tool, enter if you Dare!!!")
 
-let passinput = window.prompt("Please Input Your Password Peseant");
 let palmersupersecretpassword = "Ilovemymomsomuch"
+let readline = require ("readline");
+let reader = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-if (passinput.length = null){
-    console.log("Wrong Password Scum!")
-} else if (passinput = "passwordssss"){
+reader.question("Please type in your password!: ", function(answer){
+  console.log("Password input " + answer);
+  if (answer.length == ""){
+    console.log("You did not enter a password Scum!")
+} else if (answer == "passwordssss"){
     console.log("You Suck! Go home to the pile of dirt you came from")
-  } else if (passinput = palmersupersecretpassword){
+  } else if (answer === palmersupersecretpassword){
     console.log("You Suck! No One Can Steal Lord Palmer's Password!")
-  }  else if(passinput.length >= 10){
+  }  else if(answer.length >= 10){
     console.log("enter")
 } else {
-    console.log("access denied")
-}
-    
+    console.log("access denied")}
+});
 
+
+// reader.question("Please type in your password!: ", function(answer){
+//   console.log("Password input " + answer);
+//   return answer.charAt(1)
+//   if( return = "a" ){
+//     console.log("No 'As' allowed")
+//   }
+  
+
+// });
